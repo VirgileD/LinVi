@@ -1,0 +1,11 @@
+# required for xfce settings to work
+xfsettingsd &
+
+# start the panel
+# tint2 &
+
+# load wallpaper
+sh ~/.fehbg &
+#
+# load conkys
+sleep 6 && al-conky-session --autostart i/home/virgiled/.config/conky/default &

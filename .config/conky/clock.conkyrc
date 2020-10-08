@@ -1,0 +1,31 @@
+conky.config = {
+    alignment = 'top_left',
+    background = true,
+    border_width = 1,
+    default_color = 'white',
+    default_outline_color = 'white',
+    default_shade_color = 'white',
+    draw_borders = false,
+    draw_shades = false,
+    use_xft = true,
+    font = 'DejaVu Sans Mono:size=12',
+    gap_x = 5,
+    gap_y = 35,
+    minimum_height = 15,
+    minimum_width = 200,
+    no_buffers = true,
+    own_window = true,
+    own_window_class = 'Conky',
+    own_window_type = 'override',
+    stippled_borders = 0,
+    update_interval = 15.0,
+    uppercase = false,
+    use_spacer = 'none',
+}
+
+conky.text = [[
+${voffset 5}${color EAEAEA}${font GE Inspira:pixelsize=80}${time %H:%M}${font}\
+
+${color FFA300}${voffset 12}${font GE Inspira:pixelsize=24}${offset 10}${time %A} ${time  %d} ${time  %B} ${time %Y}${font}
+${voffset 80}
+]]

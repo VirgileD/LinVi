@@ -1,0 +1,2 @@
+conky -c /home/virgiled/.config/conky/sys.conkyrc &
+conky -c /home/virgiled/.config/conky/clock.conkyrc &

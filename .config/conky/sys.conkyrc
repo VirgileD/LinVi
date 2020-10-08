@@ -1,0 +1,61 @@
+conky.config = {
+    alignment = 'bottom_left',
+    background = false,
+    border_width = 1,
+    cpu_avg_samples = 2,
+    default_color = '#EAEAEA',
+    default_outline_color = '#EAEAEA',
+    default_shade_color = '#EAEAEA',
+    draw_borders = false,
+    draw_graph_borders = true,
+    draw_outline = false,
+    draw_shades = false,
+    use_xft = true,
+    font = 'GE Inspira:pixelsize=10',
+    gap_x = 5,
+    gap_y = 5,
+    minimum_height = 10,
+    minimum_width = 20,
+    net_avg_samples = 2,
+    no_buffers = true,
+    out_to_console = false,
+    out_to_ncurses = false,
+    out_to_stderr = false,
+    out_to_x = true,
+    extra_newline = false,
+    own_window = true,
+    own_window_class = 'Conky',
+    own_window_type = 'override',
+    own_window_transparent = yes,
+    own_window_transparent = true,
+    double_buffer=true,
+    stippled_borders = 0,
+    update_interval = 1.0,
+    uppercase = false,
+    use_spacer = 'none',
+    show_graph_scale = false,
+    show_graph_range = false
+}
+
+conky.text = [[
+${color #FFA300}PROXY:${color #EAEAEA} ${execpi 10 /home/virgiled/.config/conky/tp.sh}
+${voffset 2}
+${color #FFA300}HDD:${color} ${fs_bar 3,100 /}
+${voffset 2}
+${color #FFA300}MEM: ${color}${mem}/${memmax} (${memperc}%)
+${memgraph 40,200 FFA300 FFA300 -t}
+${color #FFA300}CPU1:${color} ${cpu cpu1}%
+${cpugraph cpu1 40,200 FFA300 FFA300 -t}
+${offset 210}${voffset -66}${color #FFA300}CPU2:${color} ${cpu cpu2}%
+${offset 210}${voffset 0}${cpugraph cpu2 40,200 FFA300 FFA300 -t}
+${color #FFA300}IOW:${color} ${diskio_write}
+${diskiograph_write /dev/sda2 40,200 EAEAEA FFA300 -t}
+${offset 210}${voffset -66}${color #FFA300}IOR:${color}  ${diskio_read}
+${offset 210}${voffset 0}${diskiograph_read /dev/sda2 40,200 EAEAEA FFA300 -t}
+${color #FFA300}DOWN:${color} ${downspeed enp0s3}
+${downspeedgraph enp0s3 40,200 EAEAEA FFA300 -t}
+${offset 210}${voffset -66}${color #FFA300}UP:${color}  ${upspeed enp0s3}
+${offset 210}${voffset 0}${upspeedgraph enp0s3 40,200 EAEAEA FFA300 -t}
+${voffset 20}
+
+]]
